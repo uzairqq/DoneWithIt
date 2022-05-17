@@ -1,5 +1,12 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, SafeAreaView, Image } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  SafeAreaView,
+  Image,
+  TouchableWithoutFeedback,
+} from "react-native";
 
 export default function App() {
   return (
@@ -9,10 +16,16 @@ export default function App() {
         App.js to start working on your app! Uzaior Oqnbal....! Open up App.js
         to start working on your app! Uzaior Oqnbal....!
       </Text>
-      <Image
-        source={{ uri: "https://picsum.photos/200", height: 100, width: 100 }}
-        style={{ height: 100, width: 100 }}
-      />
+
+      <TouchableWithoutFeedback
+        onPress={() => console.log("Touchable Clicked")}
+      >
+        <Image
+          source={{ uri: "https://picsum.photos/200", height: 100, width: 100 }}
+          style={{ height: 100, width: 100 }}
+        />
+      </TouchableWithoutFeedback>
+
       <StatusBar style="auto" />
     </SafeAreaView>
   );
