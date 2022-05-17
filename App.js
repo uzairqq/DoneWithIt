@@ -6,6 +6,7 @@ import {
   SafeAreaView,
   Image,
   TouchableWithoutFeedback,
+  TouchableOpacity,
 } from "react-native";
 
 export default function App() {
@@ -17,14 +18,12 @@ export default function App() {
         to start working on your app! Uzaior Oqnbal....!
       </Text>
 
-      <TouchableWithoutFeedback
-        onPress={() => console.log("Touchable Clicked")}
-      >
+      <TouchableOpacity onPress={() => console.log("Touchable Clicked")}>
         <Image
           source={{ uri: "https://picsum.photos/200", height: 100, width: 100 }}
           style={{ height: 100, width: 100 }}
         />
-      </TouchableWithoutFeedback>
+      </TouchableOpacity>
 
       <StatusBar style="auto" />
     </SafeAreaView>
