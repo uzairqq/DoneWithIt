@@ -1,10 +1,18 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, SafeAreaView } from "react-native";
+import { StyleSheet, Text, View, SafeAreaView, Image } from "react-native";
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <Text>Open up App.js to start working on your app! Uzaior Oqnbal</Text>
+      <Text numberOfLines={2} onPress={() => console.log("Clicked")}>
+        Open up App.js to start working on your app! Uzaior Oqnbal....! Open up
+        App.js to start working on your app! Uzaior Oqnbal....! Open up App.js
+        to start working on your app! Uzaior Oqnbal....!
+      </Text>
+      <Image
+        source={require("./assets/icon.png")}
+        style={{ height: 100, width: 100 }}
+      />
       <StatusBar style="auto" />
     </SafeAreaView>
   );
@@ -14,5 +22,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
