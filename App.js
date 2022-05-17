@@ -10,7 +10,7 @@ export default function App() {
         to start working on your app! Uzaior Oqnbal....!
       </Text>
       <Image
-        source={require("./assets/icon.png")}
+        source={{ uri: "https://picsum.photos/200", height: 100, width: 100 }}
         style={{ height: 100, width: 100 }}
       />
       <StatusBar style="auto" />
