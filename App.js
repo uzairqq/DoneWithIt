@@ -1,11 +1,24 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, SafeAreaView, Button, Alert } from "react-native";
+import {
+  StyleSheet,
+  SafeAreaView,
+  Button,
+  Alert,
+  View,
+  Dimensions,
+} from "react-native";
 
 export default function App() {
+  console.log(Dimensions.get("screen"));
   return (
     <SafeAreaView style={styles.buttonStyle}>
-      <Button title="Click Me 1" onPress={() => alert("Button 1 Tapped")} />
-      <StatusBar style="auto" />
+      <View
+        style={{
+          backgroundColor: "dodgerblue",
+          width: "50%",
+          height: 70,
+        }}
+      ></View>
     </SafeAreaView>
   );
 }
@@ -16,8 +29,5 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     justifyContent: "center",
     alignItems: "center",
-  },
-  buttonStyle: {
-    backgroundColor: "red",
   },
 });
